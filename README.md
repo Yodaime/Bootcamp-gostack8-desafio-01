@@ -1,5 +1,3 @@
-# Bootcamp-gostack8-desafio-01
-
 # Desafio 01. Conceitos do NodeJS
 
 Crie uma aplicação do zero utilizando Express.
@@ -18,7 +16,19 @@ Essa aplicação será utilizada para armazenar projetos e suas tarefas.
 
 - `POST /projects/:id/tasks`: A rota deve receber um campo `title` e armazenar uma nova tarefa no array de tarefas de um projeto específico escolhido através do `id` presente nos parâmetros da rota;
 
+### Exemplo
 
+Se eu chamar a rota `POST /projects` repassando `{ id: 1, title: 'Novo projeto' }` e a rota `POST /projects/1/tasks` com `{ title: 'Nova tarefa' }`, meu array de projetos deve ficar assim:
+
+```js
+[
+  {
+    id: "1",
+    title: 'Novo projeto',
+    tasks: ['Nova tarefa']
+  }
+]
+```
 
 ## Middlewares
 
@@ -26,4 +36,10 @@ Essa aplicação será utilizada para armazenar projetos e suas tarefas.
 
 - Crie um middleware global chamado em todas requisições que imprime (`console.log`) uma contagem de quantas requisições foram feitas na aplicação até então;
 
+## Entrega
 
+Esse desafio **não precisa ser entregue** e não receberá correção, mas você pode ver o resultado do código do desafio aqui: https://github.com/Rocketseat/bootcamp-gostack-desafio-01
+
+Após concluir o desafio, adicionar esse código ao seu Github é uma boa forma de demonstrar seus conhecimentos para oportunidades futuras.
+
+“Sua única limitação é você mesmo”!
